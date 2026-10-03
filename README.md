@@ -1,16 +1,35 @@
-# React + Vite
+# PixelZone — front1-videojuegos-react
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Adaptación a React de la tienda [frontend1_videojuegos_s6](https://github.com/edd-stegmaier/frontend1_videojuegos_s6). El catálogo, la búsqueda, las categorías y el carrito pasan a gestionarse con hooks.
 
-Currently, two official plugins are available:
+## Cómo verla
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+Abrir la URL que indique Vite (por defecto `http://localhost:5173`).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Requisitos cubiertos
 
-## Expanding the ESLint configuration
+- Lista de productos cargada de forma dinámica desde `public/data/productos.json`.
+- Agregar y eliminar productos del carrito, con cantidad y total en pesos chilenos.
+- Contador de unidades en el navbar y en el resumen del carrito.
+- `useState` para el catálogo, el carrito y un control interactivo (el botón alterna entre "Vista compacta" y "Vista detallada").
+- `useEffect` para simular la carga externa, actualizar el estado al recibir los datos y rotar el hero.
+- Renderizado condicional: mensaje si el carrito está vacío, aviso de carga o error, y el botón del producto cambia de "Agregar al carrito" a "En el carrito" con otro estilo.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estructura
+
+```
+public/data/productos.json
+src/App.jsx
+src/components/Navbar.jsx
+src/components/Hero.jsx
+src/components/Catalogo.jsx
+src/components/ProductoCard.jsx
+src/components/Carrito.jsx
+```
+
+Las portadas se reutilizan desde el repositorio anterior para no duplicar los binarios.
