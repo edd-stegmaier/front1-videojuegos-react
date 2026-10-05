@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Abrir la URL que indique Vite (por defecto `http://localhost:5173`).
+Abrir la URL que indique Vite (por defecto `http://localhost:5173/front1-videojuegos-react/`).
 
 ## Requisitos cubiertos
 
