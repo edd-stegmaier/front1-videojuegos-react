@@ -22,7 +22,7 @@ function App() {
     async function cargarCatalogo() {
       try {
         await new Promise((resolver) => setTimeout(resolver, 600));
-        const respuesta = await fetch("/data/productos.json");
+        const respuesta = await fetch(`${import.meta.env.BASE_URL}data/productos.json`);
         if (!respuesta.ok) {
           throw new Error(`Respuesta no válida (${respuesta.status})`);
         }
