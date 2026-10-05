@@ -31,5 +31,3 @@ src/components/Catalogo.jsx
 src/components/ProductoCard.jsx
 src/components/Carrito.jsx
 ```
-
-Las portadas se reutilizan desde el repositorio anterior para no duplicar los binarios.
